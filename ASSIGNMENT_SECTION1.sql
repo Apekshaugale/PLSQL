@@ -1,0 +1,179 @@
+Write a PL/SQL program to check whether a given number is positive, negative, or zero.
+
+declare
+A INT:= &ENTER_THE_NUMBER;
+BEGIN
+    IF A>0 THEN
+    DBMS_OUTPUT.PUT_LINE('tHE GIVEN NUMBER ' || A || ' IS POSITIVE');
+    ELSIF A<0 THEN 
+    DBMS_OUTPUT.PUT_LINE('tHE GIVEN NUMBER ' || A|| ' IS NEGATIVE');
+    ELSE 
+    DBMS_OUTPUT.PUT_LINE('tHE GIVEN NUMBER ' ||A|| ' IS ZERO');
+    END IF ;
+    END;
+    /
+
+
+    Write a program to check whether a given number is even or odd.
+    declare
+    B INT:= &ENTER_THE_NUMBER;
+    BEGIN 
+        IF MOD(B,2)=0 THEN
+        DBMS_OUTPUT.PUT_LINE('tHE GIVEN NUMBER ' ||B|| ' IS EVEN');
+        ELSE
+        DBMS_OUTPUT.PUT_LINE('tHE GIVEN NUMBER ' ||B|| ' IS ODD');
+        END IF;
+        END;
+        /
+
+
+Write a program to find the greatest among three numbers.
+declare
+A INT:= &ENTER_THE_FIRST_NUMBER;
+B INT := &ENTER_THE_SECOND_NUMBER;
+C INT := &ENTER_THE_THIRD_NUMBER ;
+BEGIN
+    IF A>B AND A>C THEN
+    DBMS_OUTPUT.PUT_LINE('tHE GIVEN NUMBER ' ||A|| ' IS GREATER');
+    ELSIF B>A AND B>C THEN 
+    DBMS_OUTPUT.PUT_LINE('tHE GIVEN NUMBER ' ||B|| ' IS GREATER');
+    ELSE
+    DBMS_OUTPUT.PUT_LINE('tHE GIVEN NUMBER ' ||C|| ' IS CREATER');
+    END IF;
+    END;
+    /
+
+Write a program to check whether a given year is a leap year or not.
+DECLARE
+    YEAR INT := &ENTER_THE_YEAR;
+BEGIN
+    IF MOD(YEAR,4)=0 THEN
+    DBMS_OUTPUT.PUT_LINE('tHE GIVEN YEAR ' ||YEAR|| ' IS LEAP YEAR');
+    ELSE
+    DBMS_OUTPUT.PUT_LINE('tHE GIVEN YEAR ' ||YEAR|| ' IS NOT A LEAP YEAR');
+    END IF;
+    END;
+    /
+    
+Write a program to check whether a given character is a vowel or consonant.
+DECLARE
+A VARCHAR(20):= '&ENTER_THE_CHARACTER';
+BEGIN
+    IF A IN ('A','E','I','O','U','a','e','i','o','u') THEN
+    DBMS_OUTPUT.PUT_LINE('tHE GIVEN CHAARACTER ' ||A|| ' IS VOWELS');
+    ELSE 
+    DBMS_OUTPUT.PUT_LINE('tHE GIVEN CHARACTER ' ||A|| ' IS CONSONANT');
+  END IF;
+  END;
+  /
+  
+
+  Write a program to check whether a given number is divisible by 5 and 11 or not.
+  DECLARE 
+  NUM INT :=&ENTER_THE_NUMBER;
+  BEGIN
+    IF MOD(NUM,5)=0 AND MOD(NUM,11)=0 THEN
+    DBMS_OUTPUT.PUT_LINE('tHE GIVEN NUMBER ' ||NUM|| ' IS divisible by 5 and 11 ');
+    ELSE
+    DBMS_OUTPUT.PUT_LINE('tHE GIVEN NUMBER ' ||NUM|| ' IS NOT divisible by 5 and 11 ');
+    END IF ;
+    END;
+    /
+
+
+  Write a program that checks whether a person is eligible to vote (age ≥ 18).
+
+  DECLARE 
+  AGE INT := &ENTER_THE_AGE;
+  BEGIN
+    IF AGE>=18 THEN 
+    DBMS_OUTPUT.PUT_LINE('YOU ARE ELIGIBLE TO VOTE');
+    ELSE
+    DBMS_OUTPUT.PUT_LINE('YOU ARE NOT ELIGIBLE TO VOTE');
+    END IF;
+    END;
+    /
+    
+
+   Write a program to calculate the grade of a student based on marks using IF-ELSIF ladder:
+> 90 → A
+80–89 → B
+70–79 → C
+60–69 → D
+< 60 → Fail
+
+DECLARE
+MARKS INT:= &ENTER_THE_MARKS;
+BEGIN
+IF MARKS>=90 THEN
+ DBMS_OUTPUT.PUT_LINE('GRADE A');
+ELSIF MARKS>=80 THEN
+ DBMS_OUTPUT.PUT_LINE('GRADE B');
+ELSIF MARKS>=70 THEN
+ DBMS_OUTPUT.PUT_LINE('GRADE C');
+ELSIF MARKS>=60 THEN
+ DBMS_OUTPUT.PUT_LINE('GRADE D');
+ELSE
+ DBMS_OUTPUT.PUT_LINE('FAIL');
+ END IF;
+ END;
+ /
+
+
+Write a program using CASE to display the day name based on a number (1–7).
+DECLARE 
+DAY INT:= &ENTER_THE_DAY_NUMNER;
+BEGIN
+    IF DAY=1 THEN
+    DBMS_OUTPUT.PUT_LINE('MONDAY');
+    ELSIF DAY=2 THEN
+    DBMS_OUTPUT.PUT_LINE('TUESDAY');
+    ELSIF DAY=3 THEN
+    DBMS_OUTPUT.PUT_LINE('WEDNESDAY');
+    ELSIF DAY=4 THEN
+    DBMS_OUTPUT.PUT_LINE('THRUSDAY');
+    ELSIF DAY=5 THEN
+    DBMS_OUTPUT.PUT_LINE('FRIDAY');
+    ELSIF DAY=6 THEN
+    DBMS_OUTPUT.PUT_LINE('SATURDAY');
+    ELSIF DAY=7 THEN
+    DBMS_OUTPUT.PUT_LINE('SUNDAY');
+    ELSE
+    DBMS_OUTPUT.PUT_LINE('ENTER THE NUMBER FROM 1 TO 7');
+   END IF;
+   END;
+   /
+
+Write a program using CASE to print a message based on the entered month number (1–12).
+DECLARE 
+MONTH INT := &ENTER_THE_MONTH_NUMBER;
+BEGIN
+    IF    MONTH=1 THEN
+    DBMS_OUTPUT.PUT_LINE('ITS JAN NEW YEER BEGINS');
+    ELSIF    MONTH=2 THEN
+    DBMS_OUTPUT.PUT_LINE('ITS FEB WHERE ALL DAYS STARTS');
+    ELSIF    MONTH=3 THEN
+    DBMS_OUTPUT.PUT_LINE('ITS MARCH 10TH EXAM');
+    ELSIF    MONTH=4 THEN
+    DBMS_OUTPUT.PUT_LINE('ITS APRIL VACCANITIONS STARTS');
+    ELSIF    MONTH=5 THEN
+    DBMS_OUTPUT.PUT_LINE('ITS MAY HOT SUMMER AND MANGO DAYS');
+    ELSIF    MONTH=6 THEN 
+    DBMS_OUTPUT.PUT_LINE('ITS JUNE BACK TO SCHOOL');
+    ELSIF    MONTH=7 THEN
+    DBMS_OUTPUT.PUT_LINE('ITS JULY STARTS THE RAINY DAYS');
+    ELSIF    MONTH=8 THEN
+    DBMS_OUTPUT.PUT_LINE('ITS AUGUST WE GET THE INDEPENDENT');
+    ELSIF    MONTH=9 THEN
+    DBMS_OUTPUT.PUT_LINE('ITS SEPTEMBER GANGESH FESTIVAL');
+    ELSIF    MONTH=10 THEN
+    DBMS_OUTPUT.PUT_LINE('ITS OCTOBER NAVRATRI');
+    ELSIF    MONTH=11 THEN
+    DBMS_OUTPUT.PUT_LINE('ITS NOVEMBER FESTIVAL OF LIGHT ');
+    ELSIF    MONTH=12 THEN
+    DBMS_OUTPUT.PUT_LINE('ITS DECEMBER CHRISTMUS HOLIDAY');
+    ELSE
+    DBMS_OUTPUT.PUT_LINE('ENTER NUMBER FROM 1 TO 12');
+    END IF;
+    END;
+    /

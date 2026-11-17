@@ -1,4 +1,4 @@
-Write a PL/SQL program to check whether a given number is positive, negative, or zero
+kkkkkkkkkkkkkkWrite a PL/SQL program to check whether a given number is positive, negative, or zero
 
 declare 
 A int := &Enter_the_number;
